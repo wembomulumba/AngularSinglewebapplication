@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataService {
 
+   // URL to retrieve the data
    API_URL = 'http://localhost:3000/news/all/';
    currentArticle: any;
 
@@ -14,10 +15,8 @@ export class DataService {
    constructor(private http: HttpClient) { 
         this.http.get(this.API_URL);
    }
-
+  // http get to retrieve data
    getNotes() {
     return this.http.get(this.API_URL);
    }
-
-
 }
